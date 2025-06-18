@@ -1,0 +1,110 @@
+/*
+propriedades parent 
+display: flex	Ativa o Flexbox
+flex-direction	Direção dos filhos: row, column, etc.
+justify-content	Alinha filhos na horizontal (principal)
+align-items	Alinha filhos na vertical (cruzada)
+flex-wrap	Permite os filhos quebrarem de linha
+gap	Espaço entre os filhos
+
+
+propriedades child
+Propriedade	O que faz
+flex-grow	Diz se o filho pode crescer e ocupar mais espaço
+flex-shrink	Diz se o filho pode encolher quando faltar espaço
+flex-basis	Tamanho base inicial do filho
+align-self	Alinha o filho individualmente (diferente dos outros, se
+*/
+
+.body{
+  background: linear-gradient(135deg, #2b2b2b, #121212);
+}
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:300px;
+    height:auto;
+    margin:0 auto;
+    margin-top:100px;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: #212121;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    max-width:90% ;
+}
+
+.display{
+    width: 284px;
+    height: 50px;
+    margin-bottom: 5px;
+    background-color: #212121 ;
+    color:#ffffff;
+    border-color:white;
+    border:solid #FFFFFF 2px;
+    border-radius: 5px;
+    font-size:22px;
+}
+
+.display:focus{
+    border:solid 2px #39FF14;
+    border-radius: 5px;
+    outline: none;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:5px;
+    width: 290px;
+}
+
+.btn{
+    height: 50px;
+    cursor: pointer;
+    border-radius:5px;
+    border: 2px solid rgba(255,255,255,0.4);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+.operator,
+.number{
+    font-size: 20px;
+    font-family: 'Roboto Mono';
+}
+
+.operator{
+    background-color: #f5f5f7;
+    color:#212121;
+    font-weight: bold;
+}
+
+.number{
+    background-color: #999999;
+    color:#212121;
+}
+
+#equal{
+    grid-column: span 4;
+    background-color: #39FF14;
+    color:#ffffff;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+#equal:hover {
+    background-color: #32e010; /* um verde neon um pouco mais escuro no hover */
+}
+
+
+
+
+
